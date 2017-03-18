@@ -2,6 +2,8 @@ const express = require("express");
 const hbs = require("hbs");
 const fs = require ("fs");
 
+const port = process.env.PORT || 3000;
+
 var app = express();
 
 hbs.registerPartials(__dirname + "/views/partials");
@@ -96,9 +98,16 @@ app.get('/fail',(req,res) =>{
 });
 });
 
-
+/*
+// port 3000 as an example for the local testing
 app.listen(3000,()=>{
  console.log("server is up on port 3000")
 });
+*/
+
+ // port 3000 as an example for the local testing
+ app.listen(port,()=>{
+ console.log("server is up on port 3000")
+ });
 
 //////////////////////////////
