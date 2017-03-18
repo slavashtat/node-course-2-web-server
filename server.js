@@ -91,6 +91,13 @@ app.get('/about',(req,res) =>{
  });
 });
 
+app.get('/projects',(req,res) =>{
+ res.render("projects.hbs",{
+ pageTitle: "List of projects"
+});
+});
+
+
 app.get('/fail',(req,res) =>{
  res.send({
   error_code:101,
